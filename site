@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <title>ashton mercer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+body {
+  background-color: black;
+  background-image: linear-gradient(to right, #FBD3E9, #FFB5E8, #FFA8D9, #CDB9D1, #B0D8CC, #B4E0E0, #C4FFD4, #D5F5E3, #FFE8C4, #FFD3B3, #FFC2A5, #FCD5CE, #FBD3E9);
+  background-size: 4000% 100%; /* increase the background-size value */
+  animation: color-change 60s ease-in-out infinite; /* change the animation duration and timing function */
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes color-change {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+img {
+  max-width: 25%;
+  margin-bottom: 30px;
+}
+    
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+    .link {
+      font-size: 6vw;
+      margin: 10px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: .075em;
+      -webkit-text-stroke: 1.5px black;
+      text-stroke: 1.5px black;
+      background-size: 400%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: flashing-gradient 4.5s ease-in-out infinite;
+    }
+    
+    .link-ella-capital {
+      background-image: linear-gradient(-45deg, #0073ff, #fff, #0073ff);
+    }
+    
+    .link-ella-university {
+      background-image: linear-gradient(-45deg, #ffd700, #fff, #ffd700);
+    }
+    
+    .link-linkedin {
+      background-image: linear-gradient(-45deg, #32CD32, #fff, #32CD32);
+    }
+    
+    /* added keyframes for animation */
+    @keyframes flashing-gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/hg6aDku.png" alt="ashton mercer" width="25%" style="margin-bottom: 30px;">
+  <div class="links-container">
+    <a class="link link-ella-capital" href="https://ella.capital/">ella.capital</a>
+    <a class="link link-ella-university" href="https://ella.university/">ella.university</a>
+    <a class="link link-linkedin" href="https://www.linkedin.com/in/apmercer/">LinkedIn</a>
+  </div>
+</body>
+</html>
