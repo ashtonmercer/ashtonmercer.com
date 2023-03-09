@@ -59,15 +59,15 @@ img {
     }
     
     .link-ella-capital {
-      background-image: linear-gradient(-45deg, #0073ff, #fff, #0073ff);
+      background-image: #0073ff
     }
     
     .link-ella-university {
-      background-image: linear-gradient(-45deg, #ffd700, #fff, #ffd700);
+      background-image: #ffd700
     }
     
     .link-linkedin {
-      background-image: linear-gradient(-45deg, #32CD32, #fff, #32CD32);
+      background-image: #32CD32
     }
     
     /* added keyframes for animation */
@@ -82,6 +82,19 @@ img {
         background-position: 0% 50%;
       }
     }
+    /* added hover states for links */
+    .link-ella-capital:hover {
+      background-image: linear-gradient(-45deg, #0073ff, #fff, #0073ff);
+      animation: flashing-gradient 4.5s ease-in-out infinite;
+    }
+
+    .link-ella-university:hover {
+      background-image: linear-gradient(-45deg, #ffd700, #fff, #ffd700);
+      animation: flashing-gradient 4.5s ease-in-out infinite;
+    }
+
+    .link-linkedin:hover {
+      background-image: linear-gradient(-45deg, #32CD32, #fff, #32CD32);
   </style>
 </head>
 <body>
