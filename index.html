@@ -1,116 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQYYZGHX1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashton Mercer</title>
+    <link rel="icon" href="https://i.imgur.com/jLBmL6K.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'bianzhidai_noBG-Base';
+            src: url('https://raw.githubusercontent.com/sdfggvfvj/bianzhidai-2.0/main/fonts/bianzhidai_noBG/OTF/bianzhidai_noBG-Base.otf');
+        }
+        body {
+            font-family: 'bianzhidai_noBG-Base', 'Press Start 2P', cursive;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: url('data:image/x-icon;base64,AAACAAEAICACAAAAAAAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////4AH4/EPA8HgjwPB4MADweD/g8HggAAAA/////////////////////////////////////////////////////////////////////8='), auto;
+        }
 
-  gtag('config', 'G-WQYYZGHX1V');
-</script>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/jLBmL6K.png">
-  <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICACAAAAAAAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////4AH4/EPA8HgjwPB4MADweD/g8HggAAAA/////////////////////////////////////////////////////////////////////8='), auto; }</style>
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-  <title>ashton mercer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-body {
-  background-color: black;
-  background-image: linear-gradient(to right, #B4E0E0, #CDB9D1, #B0D8CC, #B4E0E0, #C4FFD4, #D5F5E3, #FFE8C4, #FFD3B3, #FFC2A5, #FCD5CE, #FBD3E9, #FFB5E8, #FFA8D9);
-  background-size: 4000% 100%; /* increase the background-size value */
-  animation: color-change 30s ease-in-out infinite; /* change the animation duration and timing function */
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+        .background-blur {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.gifer.com/NFKr.gif') center/cover no-repeat;
+            filter: blur(35px);
+            z-index: -1;
+        }
 
-@keyframes color-change {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
+        img {
+            max-width: 25%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 55px #fff); /* Adding glow effect to the icon */
+        }
 
-img {
-  max-width: 25%;
-  margin-bottom: 30px;
-}
-    
-    .links-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-    }
-    
-    .link {
-      font-size: 6vw;
-      margin: 10px;
-      color: black;
-      text-decoration: none;
-      letter-spacing: .075em;
-      -webkit-text-stroke: 1.5px black;
-      text-stroke: 1.5px black;
-      background-size: 400%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-      animation: flashing-gradient 4.5s ease-in-out infinite;
-    }
-    
-    .link-github {
-      background-image: #0073ff
-    }
-    
-    .link-ella-university {
-      background-image: #ffd700
-    }
-    
-    .link-linkedin {
-      background-image: #32CD32
-    }
-    
-    /* added keyframes for animation */
-    @keyframes flashing-gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    /* added hover states for links */
-    .link-github:hover {
-      background-image: linear-gradient(-45deg, #0073ff, #fff, #0073ff);
-      animation: flashing-gradient 4.5s ease-in-out infinite;
-    }
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
 
-    .link-ella-university:hover {
-      background-image: linear-gradient(-45deg, #ffd700, #fff, #ffd700);
-      animation: flashing-gradient 4.5s ease-in-out infinite;
-    }
+        .link {
+            font-size: 6vw;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            letter-spacing: .075em;
+            filter: drop-shadow(0 0 55px #ffffff); /* Adding glow effect to the icon */
 
-    .link-linkedin:hover {
-      background-image: linear-gradient(-45deg, #32CD32, #fff, #32CD32);
-  </style>
+        }
+    </style>
 </head>
 <body>
-  <img src="https://i.imgur.com/hg6aDku.png" alt="ashton mercer" width="25%" style="margin-bottom: 30px;">
-  <div class="links-container">
-    <a class="link link-linkedin" href="https://www.linkedin.com/in/apmercer/">LinkedIn</a>
-  </div>
+    <div class="background-blur"></div> <!-- Separate blur layer for background -->
+    <img src="https://i.imgur.com/hg6aDku.png" alt="Ashton Mercer">
+    <div class="links-container">
+        <a class="link link-linkedin" href="https://www.linkedin.com/in/apmercer/">LinkedIn</a>
+    </div>
 </body>
 </html>
