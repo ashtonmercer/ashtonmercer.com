@@ -26,6 +26,7 @@
             padding: 0;
             background: black;
             color: white;
+            overflow: hidden;
         }
         .background-blur {
             position: fixed;
@@ -33,14 +34,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://raw.githubusercontent.com/ashtonmercer/ashtonmercer/website/bg.gif') center/cover no-repeat;
             filter: blur(20px);
-            z-index: -1;
+            z-index: -2;
+            pointer-events: none;
         }
         img {
-            max-width: 25%;
+            max-width: 60%; /* Slightly increased size */
             margin-bottom: 30px;
-            filter: drop-shadow(0 0 20px #fff); /* Reduced glow effect for performance */
         }
         .links-container {
             display: flex;
@@ -62,13 +62,46 @@
             color: #0a66c2;
             transform: scale(1.05);
         }
+        .trail {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            animation: fadeOut 1.5s forwards;
+            z-index: -1;
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="background-blur"></div>
-    <img src="https://i.imgur.com/D4HnjAG.png" alt="Logo">
+    <img src="https://i.imgur.com/ZCZjxNv.png" alt="Logo">
     <div class="links-container">
         <a class="link" href="https://www.linkedin.com/in/apmercer/">LinkedIn</a>
     </div>
+    <script>
+        document.body.addEventListener('mousemove', function(event) {
+            const trail = document.createElement('div');
+            const x = event.clientX;
+            const y = event.clientY;
+            const color = `rgba(${Math.floor((x / window.innerWidth) * 255)}, ${Math.floor((y / window.innerHeight) * 255)}, 255, 0.5)`;
+            trail.className = 'trail';
+            trail.style.left = `${x}px`;
+            trail.style.top = `${y}px`;
+            trail.style.background = `radial-gradient(circle, ${color} 0%, transparent 80%)`;
+            document.body.appendChild(trail);
+
+            setTimeout(() => {
+                trail.remove();
+            }, 1500);
+        });
+    </script>
 </body>
 </html>
