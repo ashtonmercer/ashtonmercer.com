@@ -21,7 +21,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            cursor: url('data:image/x-icon;base64,AAACAAEAICACAAAAAAAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////////////////4AH4/EPA8HgjwPB4MADweD/g8HggAAAA/////////////////////////////////////////////////////////////////////8='), auto;
             margin: 0;
             padding: 0;
             background: black;
@@ -59,24 +58,16 @@
             transition: color 0.3s, transform 0.3s;
         }
         .link:hover {
-            color: #0a66c2;
+            color: #ffffff;
             transform: scale(1.05);
         }
         .trail {
             position: fixed;
             border-radius: 50%;
             pointer-events: none;
-            width: 100px;
-            height: 100px;
             transform: translate(-50%, -50%);
             opacity: 1;
-            animation: fadeOut 1.5s forwards;
             z-index: -1;
-        }
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-            }
         }
     </style>
 </head>
@@ -87,20 +78,25 @@
         <a class="link" href="https://www.linkedin.com/in/apmercer/">LinkedIn</a>
     </div>
     <script>
+        const colors = [
+            '#dc8a78', '#dd7878', '#ea76cb', '#8839ef', '#d20f39', 
+            '#e64553', '#fe640b', '#df8e1d', '#40a02b', '#179299', 
+            '#04a5e5', '#209fb5', '#1e66f5', '#7287fd'
+        ];
+
         document.body.addEventListener('mousemove', function(event) {
             const trail = document.createElement('div');
-            const x = event.clientX;
-            const y = event.clientY;
-            const color = `rgba(${Math.floor((x / window.innerWidth) * 255)}, ${Math.floor((y / window.innerHeight) * 255)}, 255, 0.5)`;
+            const x = event.clientX + (Math.random() * 200 - 100);
+            const y = event.clientY + (Math.random() * 200 - 100);
+            const size = 200 + Math.random() * 200;
+            const color = colors[Math.floor(Math.random() * colors.length)];
             trail.className = 'trail';
             trail.style.left = `${x}px`;
             trail.style.top = `${y}px`;
-            trail.style.background = `radial-gradient(circle, ${color} 0%, transparent 80%)`;
+            trail.style.width = `${size}px`;
+            trail.style.height = `${size}px`;
+            trail.style.background = `radial-gradient(circle, ${color} 0%, transparent 70%)`;
             document.body.appendChild(trail);
-
-            setTimeout(() => {
-                trail.remove();
-            }, 1500);
         });
     </script>
 </body>
